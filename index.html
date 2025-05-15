@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Calcio Saponato - Prenota il tuo divertimento su campo saponato.">
+    <title>Calcio Saponato</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Calcio Saponato</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#prenota">Prenota</a></li>
+                <li><a href="#eventi">Eventi</a></li>
+                <li><a href="#login">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h2>Benvenuti su Calcio Saponato!</h2>
+        <p>Divertiti con partite scivolose e uniche sul nostro campo saponato.</p>
+    </section>
+
+    <section id="prenota">
+        <h2>Prenota la tua partita</h2>
+        <form>
+            <label for="data">Data:</label>
+            <input type="date" id="data" name="data">
+
+            <label for="ora">Ora:</label>
+            <input type="time" id="ora" name="ora">
+
+            <label for="modalità">Modalità:</label>
+            <select id="modalità" name="modalità">
+                <option value="saponato">Calcio Saponato</option>
+                <option value="bubble">Bubble Football</option>
+            </select>
+
+            <label for="partecipanti">Numero di partecipanti:</label>
+            <input type="number" id="partecipanti" name="partecipanti" min="2" max="10">
+
+            <button type="submit">Prenota ora</button>
+        </form>
+    </section>
+
+    <section id="eventi">
+        <h2>Eventi e Partite</h2>
+        <p>Scopri gli eventi speciali e le partite in programma!</p>
+    </section>
+
+    <section id="login">
+        <h2>Accedi o Registrati</h2>
+        <form>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username">
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password">
+
+            <button type="submit">Accedi</button>
+        </form>
+        <p>Non hai un account? <a href="#register">Registrati qui</a>.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Calcio Saponato. Tutti i diritti riservati.</p>
+    </footer>
+</body>
+</html>

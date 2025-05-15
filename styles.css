@@ -1,0 +1,121 @@
+/* CSS Pulito per Calcio Saponato */
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #ecf0f1;
+    --bg-color: #f4f4f9;
+    --text-color: #333;
+    --spacing: 1rem;
+    --max-width: 1200px;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+  }
+  
+  .container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: var(--spacing);
+  }
+  
+  header {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    text-align: center;
+    padding: calc(var(--spacing) * 1.5) 0;
+  }
+  
+  nav {
+    margin-top: var(--spacing);
+  }
+  
+  nav a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    margin: 0 var(--spacing);
+    font-weight: 500;
+  }
+  
+  main {
+    padding: var(--spacing) 0;
+  }
+  
+  h1, h2, h3 {
+    margin-bottom: calc(var(--spacing) / 2);
+    font-weight: 600;
+  }
+  
+  p {
+    margin-bottom: var(--spacing);
+  }
+  
+  button,
+  input[type="submit"] {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: background-color 0.2s;
+  }
+  
+  button:hover,
+  input[type="submit"]:hover {
+    background-color: darken(var(--primary-color), 10%);
+  }
+  
+  .form-group {
+    margin-bottom: var(--spacing);
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 0.25rem;
+    font-weight: 500;
+  }
+  
+  input,
+  select,
+  textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: var(--spacing);
+  }
+  
+  thead {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+  }
+  
+  td, th {
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  footer {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    text-align: center;
+    padding: var(--spacing);
+    margin-top: var(--spacing);
+  }
+git   
