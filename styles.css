@@ -124,3 +124,55 @@ footer {
   padding: var(--spacing);
   margin-top: var(--spacing);
 }
+
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+.event-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.event-image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+.event-info {
+  padding: 1rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.event-info h3 {
+  margin-top: 0;
+  font-size: 1.25rem;
+}
+.event-info time {
+  font-size: 0.9rem;
+  color: #555;
+  margin: 0.5rem 0;
+}
+.event-info p {
+  flex: 1;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+.btn {
+  background: #00aaff;
+  color: #fff;
+  padding: 0.6rem 1rem;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background 0.3s;
+}
+.btn:hover {
+  background: #008ecc;
+}
