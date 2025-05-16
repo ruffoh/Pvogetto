@@ -3,69 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Calcio Saponato - Prenota il tuo divertimento su campo saponato.">
+    <meta name="description" content="Calcio Saponato - Il tuo divertimento sicuro e professionale sul campo saponato.">
     <title>Calcio Saponato</title>
     <link rel="stylesheet" href="styles.css">
+    <script>
+        function showTab(tabId) {
+            document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+            document.getElementById(tabId).classList.add('active');
+            document.querySelectorAll('.tab-button').forEach(b => b.classList.remove('active'));
+            document.querySelector(`[data-tab="${tabId}"]`).classList.add('active');
+        }
+        window.onload = function() { showTab('home'); };
+    </script>
 </head>
 <body>
     <header>
         <h1>Calcio Saponato</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#prenota">Prenota</a></li>
-                <li><a href="#eventi">Eventi</a></li>
-                <li><a href="#login">Login</a></li>
-            </ul>
-        </nav>
     </header>
-
-    <section id="home">
-        <h2>Benvenuti su Calcio Saponato!</h2>
-        <p>Divertiti con partite scivolose e uniche sul nostro campo saponato.</p>
-    </section>
-
-    <section id="prenota">
-        <h2>Prenota la tua partita</h2>
-        <form>
-            <label for="data">Data:</label>
-            <input type="date" id="data" name="data">
-
-            <label for="ora">Ora:</label>
-            <input type="time" id="ora" name="ora">
-
-            <label for="modalità">Modalità:</label>
-            <select id="modalità" name="modalità">
-                <option value="saponato">Calcio Saponato</option>
-                <option value="bubble">Bubble Football</option>
-            </select>
-
-            <label for="partecipanti">Numero di partecipanti:</label>
-            <input type="number" id="partecipanti" name="partecipanti" min="2" max="10">
-
-            <button type="submit">Prenota ora</button>
-        </form>
-    </section>
-
-    <section id="eventi">
-        <h2>Eventi e Partite</h2>
-        <p>Scopri gli eventi speciali e le partite in programma!</p>
-    </section>
-
-    <section id="login">
-        <h2>Accedi o Registrati</h2>
-        <form>
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username">
-
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password">
-
-            <button type="submit">Accedi</button>
-        </form>
-        <p>Non hai un account? <a href="#register">Registrati qui</a>.</p>
-    </section>
-
+    <div class="tabs">
+        <button class="tab-button" data-tab="home" onclick="showTab('home')">Home</button>
+        <button class="tab-button" data-tab="prenota" onclick="showTab('prenota')">Prenota</button>
+        <button class="tab-button" data-tab="eventi" onclick="showTab('eventi')">Eventi</button>
+        <button class="tab-button" data-tab="chi-siamo" onclick="showTab('chi-siamo')">Chi Siamo</button>
+        <button class="tab-button" data-tab="contatti" onclick="showTab('contatti')">Contatti</button>
+        <button class="tab-button" data-tab="login" onclick="showTab('login')">Login</button>
+    </div>
+    <main class="container">
+        <!-- HOME -->
+        <section id="home" class="tab-content">
+            <h2>Benvenuti su Calcio Saponato!</h2>
+            <p>Divertiti con partite scivolose e uniche sul nostro campo saponato.</p>
+            <div class="image-gallery">
+                <img src="img/calcio1.jpg" alt="Partita su campo saponato">
+                <img src="img/calcio2.jpg" alt="Giocatori in azione">
+                <img src="img/calcio3.jpg" alt="Vittoria scivolosa">
+            </div>
+        </section>
+        <!-- PRENOTA -->
+        <section id="prenota" class="tab-content">
+            <h2>Prenota la tua partita</h2>
+            <form>
+                <label class="box" for="data">Data:</label>
+                <input class="box" type="date" id="data" name="data">
+                <label class="box" for="ora">Ora:</label>
+                <input class="box" type="time" id="ora" name="ora">
+                <label class="box" for="modalita">Modalità:</label>
+                <select class="box" id="modalita" name="modalita">
+                    <option value="saponato">Calcio Saponato</option>
+                    <option value="bubble">Bubble Football</option>
+                </select>
+                <label class="box" for="partecipanti">Partecipanti:</label>
+                <input class="box" type="number" id="partecipanti" name="partecipanti" min="2" max="10">
+                <button type="submit">Prenota ora</button>
+            </form>
+        </section>
+        <!-- EVENTI -->
+        <section id="eventi" class="tab-content">
+            <h2>Eventi e Partite</h2>
+            <p>Scopri i tornei, i campionati e gli eventi speciali in programma. Rimani aggiornato e prenota il tuo posto!</p>
+        </section>
+        <!-- CHI SIAMO -->
+        <section id="chi-siamo" class="tab-content">
+            <h2>Chi Siamo</h2>
+            <p>Siamo un team di appassionati di sport e divertimento, con anni di esperienza nell'organizzazione di eventi all'aperto. Il nostro obiettivo è offrire un'esperienza unica, sicura e divertente sul campo saponato, in un ambiente professionale e accogliente.</p>
+            <p>La nostra missione è promuovere lo sport come mezzo di aggregazione, divertimento e benessere fisico, garantendo standard elevati di sicurezza e qualità.</p>
+        </section>
+        <!-- CONTATTI -->
+        <section id="contatti" class="tab-content">
+            <h2>Contattaci</h2>
+            <p>Per informazioni, richieste o assistenza, contattaci:</p>
+            <ul>
+                <li>Email: <a href="mailto:info@calciosaponato.it">info@calciosaponato.it</a></li>
+                <li>Telefono: <a href="tel:+390123456789">+39 012 345 6789</a></li>
+                <li>Indirizzo: Via Sportiva, 10, 00100 Roma</li>
+            </ul>
+            <form>
+                <label class="box" for="nome">Nome:</label>
+                <input class="box" type="text" id="nome" name="nome" required>
+                <label class="box" for="email">Email:</label>
+                <input class="box" type="email" id="email" name="email" required>
+                <label class="box" for="messaggio">Messaggio:</label>
+                <textarea class="box" id="messaggio" name="messaggio" rows="4" required></textarea>
+                <button type="submit">Invia Messaggio</button>
+            </form>
+        </section>
+        <!-- LOGIN -->
+        <section id="login" class="tab-content">
+            <h2>Accedi o Registrati</h2>
+            <form>
+                <label class="box" for="username">Username:</label>
+                <input class="box" type="text" id="username" name="username">
+                <label class="box" for="password">Password:</label>
+                <input class="box" type="password" id="password" name="password">
+                <button type="submit">Accedi</button>
+            </form>
+            <p>Non hai un account? <a href="#register">Registrati qui</a>.</p>
+        </section>
+    </main>
     <footer>
         <p>&copy; 2025 Calcio Saponato. Tutti i diritti riservati.</p>
     </footer>

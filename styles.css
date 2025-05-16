@@ -1,121 +1,126 @@
-/* CSS Pulito per Calcio Saponato */
+/* styles.css */
 :root {
-    --primary-color: #2c3e50;
-    --secondary-color: #ecf0f1;
-    --bg-color: #f4f4f9;
-    --text-color: #333;
-    --spacing: 1rem;
-    --max-width: 1200px;
-  }
-  
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: 'Segoe UI', Tahoma, sans-serif;
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    line-height: 1.6;
-  }
-  
-  .container {
-    max-width: var(--max-width);
-    margin: 0 auto;
-    padding: var(--spacing);
-  }
-  
-  header {
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
-    text-align: center;
-    padding: calc(var(--spacing) * 1.5) 0;
-  }
-  
-  nav {
-    margin-top: var(--spacing);
-  }
-  
-  nav a {
-    color: var(--secondary-color);
-    text-decoration: none;
-    margin: 0 var(--spacing);
-    font-weight: 500;
-  }
-  
-  main {
-    padding: var(--spacing) 0;
-  }
-  
-  h1, h2, h3 {
-    margin-bottom: calc(var(--spacing) / 2);
-    font-weight: 600;
-  }
-  
-  p {
-    margin-bottom: var(--spacing);
-  }
-  
-  button,
-  input[type="submit"] {
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
-    border: none;
-    padding: 0.75rem 1.5rem;
-    cursor: pointer;
-    border-radius: 4px;
-    font-size: 1rem;
-    transition: background-color 0.2s;
-  }
-  
-  button:hover,
-  input[type="submit"]:hover {
-    background-color: darken(var(--primary-color), 10%);
-  }
-  
-  .form-group {
-    margin-bottom: var(--spacing);
-  }
-  
-  label {
-    display: block;
-    margin-bottom: 0.25rem;
-    font-weight: 500;
-  }
-  
-  input,
-  select,
-  textarea {
-    width: 100%;
-    padding: 0.5rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: var(--spacing);
-  }
-  
-  thead {
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
-  }
-  
-  td, th {
-    padding: 0.75rem;
-    border: 1px solid #ddd;
-    text-align: left;
-  }
-  
-  footer {
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
-    text-align: center;
-    padding: var(--spacing);
-    margin-top: var(--spacing);
-  }
-git   
+  --primary-color: #2c3e50;
+  --secondary-color: #ecf0f1;
+  --accent-color: #e67e22;
+  --bg-color: #f4f4f9;
+  --text-color: #333;
+  --spacing: 1rem;
+  --max-width: 1200px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+header {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  text-align: center;
+  padding: calc(var(--spacing) * 1.5) 0;
+}
+.tabs {
+  display: flex;
+  justify-content: center;
+  background: var(--secondary-color);
+  border-bottom: 2px solid var(--accent-color);
+}
+.tab-button {
+  cursor: pointer;
+  padding: 0.75rem 1.5rem;
+  background: transparent;
+  color: var(--primary-color);
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+.tab-button.active {
+  background-color: var(--accent-color);
+  color: var(--secondary-color);
+}
+.tab-content {
+  display: none;
+  padding: var(--spacing) 0;
+}
+.tab-content.active {
+  display: block;
+}
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--spacing);
+}
+h2 {
+  margin-bottom: 0.5rem;
+  color: var(--primary-color);
+}
+p {
+  margin-bottom: var(--spacing);
+}
+form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: 500;
+}
+input, select, textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.3rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+button, input[type="submit"] {
+  background-color: var(--accent-color);
+  color: var(--secondary-color);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-top: 1rem;
+  transition: background-color 0.2s;
+}
+button:hover, input[type="submit"]:hover {
+  background-color: #cf6b1a;
+}
+/* Box class for form fields */
+.box {
+  display: block;
+  margin: 0.5rem auto;
+  width: 50%;
+}
+.image-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+.image-gallery img {
+  max-width: 30%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+.image-gallery img:hover {
+  transform: scale(1.05);
+}
+footer {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  text-align: center;
+  padding: var(--spacing);
+  margin-top: var(--spacing);
+}
